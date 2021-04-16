@@ -1,16 +1,30 @@
 # Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = studentrecord
 
 # Output directory
 BUILD = build
 
 # All source code files
 SRC = project_main.c\
-src/calculator_operations.c
-
+src/studentrecord.c\
+src/is_Exists.c\
+src/printMessageCenter.c\
+src/headMessage.c\
+src/welmes.c\
+src/isnameValid.c\
+src/IsValidDate.c\
+src/add_student.c\
+src/initially.c\
+src/find-student.c\
+src/view.c\
+src/delete.c\
+src/cred_upd.c\
+src/menu.c\
+src/log_in.c\
+src/main.c\
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
+TEST_SRC = src/studentrecord.c\
+test/test_studentrecord.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
@@ -51,10 +65,27 @@ test:$(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
 	./$(TEST_OUTPUT)
 
+analyze: test memcheck staticcheck coverage sanitize_check
+
+staticcheck:
+	cppcheck --enable=all -iunity .
+
+memcheck:
+	valgrind ./$(TEST_OUTPUT)
+
+sanitize_check:
+	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)
+
+coverage:$(TEST_SRC)
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)
+	gcov -a calculator_operations.c
+
 # Remove all the built files, invoke by `make clean`
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
 
 # Create new build folder if not present
 $(BUILD):
-	mkdir build
+mkdir build
