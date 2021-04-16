@@ -39,8 +39,14 @@ H_03	Checking student record	enter the student details 	Enter the student name a
 
 
 Introduction:
+
+
 This mini project is a console application using the c programming language. you can do the basic student record tasks like adding the student info, view the student, search the student, etc.
+
+
 Research:	
+
+
 We can further develop this software to add more features.		
 .
 
@@ -48,6 +54,8 @@ We can further develop this software to add more features.
 
 
 4W&1H
+
+
 Who – Staffs who are working with student record.
 
 
