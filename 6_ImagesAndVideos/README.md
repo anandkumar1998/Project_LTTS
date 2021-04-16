@@ -33,11 +33,20 @@ Test ID	Description	Exp I/P	Exp o/p	Actual o/p	Type of test
 H_01	Check if pointers are correctly initialized	Pointer declaration	NULL pointer	Pointers with NULL varaible	technical
 H_02	Enter login id & password	Enter id & password	Welcome to student record management	Welcome to student record managment	Technical
 H_03	Checking student record	enter the student details 	Enter the student name and details	Enter the student details nad details	Requirement based![image](https://user-images.githubusercontent.com/31066215/115001734-8dcf9380-9ec1-11eb-8a3c-0808c01ed733.png)
+
+
+
+
+
 Introduction:
 This mini project is a console application using the c programming language. you can do the basic student record tasks like adding the student info, view the student, search the student, etc.
 Research:	
 We can further develop this software to add more features.		
 .
+
+
+
+
 4W&1H
 Who – Staffs who are working with student record.
 What – Helps to quickly check record of the student.
