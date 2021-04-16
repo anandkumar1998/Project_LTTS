@@ -49,8 +49,16 @@ We can further develop this software to add more features.
 
 4W&1H
 Who – Staffs who are working with student record.
+
+
 What – Helps to quickly check record of the student.
+
+
 When – When any parents or staff asks for record we can give it.
+
+
 Where – Used in schools , colleges & other public place.
+
+
 How – Once the id & password are correctly entered. You can enter the other details afterward.
 
